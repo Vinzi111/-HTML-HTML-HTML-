@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Форма регистрации</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .input-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+  button {
+    padding: 10px 20px;
+  }
+  .input-group {
+    flex-basis: calc(33.333% - 20px);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="input-group">
+    <label for="firstName">Имя</label>
+    <input type="text" id="firstName" placeholder="Имя">
+  </div>
+  <div class="input-group">
+    <label for="lastName">Фамилия</label>
+    <input type="text" id="lastName" placeholder="Фамилия">
+  </div>
+  <div class="input-group">
+    <label for="login">Логин</label>
+    <input type="text" id="login" placeholder="Логин">
+  </div>
+  <div class="input-group">
+    <label for="country">Страна</label>
+    <select id="country">
+      <option value="kazakhstan">Казахстан</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <label for="city">Город</label>
+    <select id="city">
+      <option value="almaty">Алматы</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <label for="street">Улица</label>
+    <input type="text" id="street" placeholder="Улица">
+  </div>
+  <div class="input-group" style="flex-basis: 50%;">
+    <button type="button">Загрузить данные</button>
+  </div>
+</div>
+
+</body>
+</html>

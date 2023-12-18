@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  td {
+    padding: 10px;
+  }
+  input[type="text"], input[type="date"], select {
+    width: 100%;
+  }
+  input[type="submit"] {
+    width: auto;
+  }
+</style>
+</head>
+<body>
+  <form action="/register-student" method="post">
+    <table>
+      <tr>
+        <td><label for="first-name">Имя:</label></td>
+        <td><input type="text" id="first-name" name="first_name"></td>
+      </tr>
+      <tr>
+        <td><label for="last-name">Фамилия:</label></td>
+        <td><input type="text" id="last-name" name="last_name"></td>
+      </tr>
+      <tr>
+        <td><label for="patronymic">Отчество:</label></td>
+        <td><input type="text" id="patronymic" name="patronymic"></td>
+      </tr>
+      <tr>
+        <td><label for="hometown">Родной город:</label></td>
+        <td>
+          <select id="hometown" name="hometown">
+            <option value="almaty">Алматы</option>
+            <!-- Additional cities here -->
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Пол:</td>
+        <td>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Мужской</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Женский</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="birthdate">Дата рождения:</label></td>
+        <td><input type="date" id="birthdate" name="birthdate"></td>
+      </tr>
+      <tr>
+        <td><label for="education">Образование:</label></td>
+        <td>
+          <select id="education" name="education">
+            <option value="university_almaty">РФМШ г.Алматы</option>
+            <!-- Additional education options here -->
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="ent-scores">Баллы ЕНТ:</label></td>
+        <td><input type="number" id="ent-scores" name="ent_scores" min="0"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" value="Зарегистрировать"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
